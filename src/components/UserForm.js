@@ -7,14 +7,8 @@ import Success from './Success';
 export class UserForm extends Component {
   state = {
     step: 1,
-    name: '',
-    accountnumber: '',
-    mortgageValue: '',
-    mortgageinterest: '',
-    terminyear: '',
     mortgageholiday: '',
-    oldemi: '',
-    newemi: '',
+    
   };
 
   // Proceed to next step
@@ -40,8 +34,8 @@ export class UserForm extends Component {
 
   render() {
     const { step } = this.state;
-    const { name, accountnumber, mortgageValue, mortgageinterest, terminyear, mortgageholiday, oldemi, newemi } = this.state;
-    const values = { name, accountnumber, mortgageValue, mortgageinterest, terminyear, mortgageholiday, oldemi, newemi };
+    const { mortgageholiday } = this.state;
+    const values = { mortgageholiday };
 
     switch (step) {
       case 1:
@@ -53,13 +47,13 @@ export class UserForm extends Component {
           />
         );
       case 2:
-        return (
-          <Confirm
-            nextStep={this.nextStep}
-            prevStep={this.prevStep}
-            values={values}
-          />
-        );
+          return (
+            <Confirm
+              nextStep={this.nextStep}
+              prevStep={this.prevStep}
+              values={values}
+            />
+          );
       case 3:
         return <Success />;
       default:

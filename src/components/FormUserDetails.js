@@ -25,46 +25,56 @@ export class FormUserDetails extends Component {
             <TextField
               placeholder="Enter Your Name"
               label="Name"
-              onChange={handleChange('name')}
-              defaultValue={values.name}
+              defaultValue={'John Smith'}
               margin="normal"
+              InputProps={{
+                readOnly: true,
+              }}
               fullWidth
             />
             <br />
             <TextField
               placeholder="Enter Your AccountNumber"
-              label="Accountnumber"
-              onChange={handleChange('accountnumber')}
-              defaultValue={values.occupation}
+              label="Loan Account Number"
+              defaultValue={50000012345602}
               margin="normal"
+              InputProps={{
+                readOnly: true,
+              }}
               fullWidth
             />
             <br />
             <AppBar title="Enter Loan Details" />
             <TextField
-              placeholder="Total Mortgage Value"
-              label="Total Mortgage Value"
-              onChange={handleChange('mortgageValue')}
-              defaultValue={25000}
+              placeholder="Current Debt"
+              label="Current Loan"
+              defaultValue={'119646.66 £'}
               margin="normal"
+              InputProps={{
+                readOnly: true,
+              }}
               fullWidth
             />
             <br />
             <TextField
               placeholder="Mortgage Interest"
               label="Fixed Interest"
-              onChange={handleChange('mortgageinterest')}
               defaultValue={4}
               margin="normal"
+              InputProps={{
+                readOnly: true,
+              }}
               fullWidth
             />
             <br />
             <TextField
               placeholder="Term in Years"
-              label="Term in Years"
-              onChange={handleChange('terminyear')}
-              defaultValue={10}
+              label="Term in Months"
+              defaultValue={60}
               margin="normal"
+              InputProps={{
+                readOnly: true,
+              }}
               fullWidth
             />
             <br />
@@ -82,7 +92,7 @@ export class FormUserDetails extends Component {
               color="primary"
               variant="contained"
               onClick={this.continue}
-            >Continue</Button>
+            >Confirm</Button>
           </Dialog>
         </>
       </MuiThemeProvider>
