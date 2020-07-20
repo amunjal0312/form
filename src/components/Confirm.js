@@ -19,7 +19,7 @@ export class Confirm extends Component {
 
   render() {
     const {
-      values: { firstName, lastName, email, accountnumber, mortgageholiday}
+      values: { name, accountnumber, mortgageholiday}
     } = this.props;
     return (
       <MuiThemeProvider>
@@ -32,13 +32,7 @@ export class Confirm extends Component {
             <AppBar title="Confirm User Data" />
             <List>
               <ListItem>
-                <ListItemText primary="First Name" secondary={firstName} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Last Name" secondary={lastName} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Email" secondary={email} />
+                <ListItemText primary="Name" secondary={name} />
               </ListItem>
               <ListItem>
                 <ListItemText primary="Account Number" secondary={accountnumber} />
